@@ -1,0 +1,485 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+  html{
+    scroll-behavior: smooth;
+  }
+  #header{
+    width: 100%;
+    height: 100vh;
+    background-color: teal;
+    background-image: url(../asset/images/pngofmountainleft.png),url(../asset/images/1mountainright.png),url(../asset/images/womenstanding.jpg);
+    background-repeat: no-repeat;
+    background-size: 80%,80%,100% 100vh;
+    background-position: left,right,0% 0%;
+    transition:background-position 0.5s,background-size 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #header:hover{
+    background-position:-120% 0%,180%,50% ;
+    background-size: 80%,80%,100% 100vh;
+  }
+  #pageName{
+    font-size: 10vw;
+    letter-spacing: 3vw;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    transform: scale(0) rotateX(360deg) rotateY(90deg);
+    transition: transform 1s;
+    transition-delay: 0.2s;
+  }
+  #header:hover #pageName{
+    transform: scale(1) rotateX(0deg) rotateY(0deg);
+  }
+  #navbar{
+    width: 100%;
+    height: 75px;
+    background-color: #fb8500;
+    position: sticky;
+    top: 0px;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px black;
+    z-index:40;
+  
+  }
+  #logo{
+    width: 150px;
+    position: relative;
+    bottom: 20px;
+    filter: drop-shadow(2px 2px 2px black);
+  }
+  #mainlist{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    color: #023047;
+    position: relative;
+    bottom: 95px;
+    left: 30px;
+  }
+  .li{
+    font-size: 25px;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: transform 0.5s;
+     text-decoration :0.5s;
+  }
+  a{
+    text-decoration: none;
+    color: #023047;
+  }
+  a:hover{
+    color: white;
+  }
+  .li:hover{
+    transform: scale(1.2);
+    text-decoration: underline 2px white;
+  }
+  #home,#places{
+    width: 100%;
+    height: 180vh;
+  }
+  
+  #home{
+    background-color: #023047;
+  }
+  #places{
+    background-color: #219ebc;
+  }
+  #info{
+    width:100%;
+    height:130vh;
+  }
+  #logout{
+    width:100%;
+    height:200vh;
+  }
+  #info{
+    background-color: #8ee68f;
+    transition:transform 0.2s;
+  }
+  #logout{
+    background-color: cyan;
+  }
+  #imageCont{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    top: 60px;
+    z-index: 30;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .imagesinHome{
+    width: 150px;
+    height: 200px;
+    position: relative;
+    right: 50px;
+    margin-left: -60px;
+    border-radius: 20px;
+    box-shadow: -5px -5px 5px black;
+    transform: rotateY(25deg) skewY(-20deg);
+    transition: transform 0.5s, box-shadow 0.5s;
+    z-index: 35;
+  }
+  .imagesinHome:hover{
+    transform:rotateY(0deg) skewY(0deg) translate(0px,-180px) scale(1.5,1.2);
+    box-shadow: 2px 2px 5px black;
+  }
+  #guide{
+    width: 300px;
+    height: 250px;
+    background-color: rgba(210,210,210,0.564);
+    position: absolute;
+    left: 30px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+  }
+  #guideHeading{
+  text-align: center;
+  padding-top: 30px;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 2px black;
+  color: #fb8500;
+  }
+  #guidePara{
+    width: 250px;
+    height: 10px;
+    padding-left: 25px;
+    text-align: justify;
+    letter-spacing: 2px;
+    font-size: 20px;
+    text-indent: 40px;
+    color: white;
+  }
+  #homepageInfo{
+    width: 100%;
+    height: 100vh;
+   /* background-color: #fb8500;*/
+   position: relative;
+   top: 120px;
+   border-top: 4px solid gainsboro;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   row-gap: 0px;
+   column-gap: 40px;
+   flex-wrap: wrap;
+  }
+  .travelContainer{
+    width: 200px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+  }
+  .containerImage{
+    width: 100%;
+    height: 100%;
+    background-size: 100% 250px;
+    transition: filter 0.5s;
+    border-radius: 10px;
+  }
+  .travelContainer:hover .containerImage{
+    filter: blur(10px);
+  }
+  .travelText{
+    position: relative;
+    bottom: 140px;
+    left: 10px;
+    font-size: 5vw;
+    text-align: center;
+    letter-spacing: 8px;
+    color: transparent;
+    transition: color 0.5s;
+  }
+  .travelContainer:hover .travelText{
+    color: white;
+  }
+  #walk{
+    background-image: url(../asset/images/walk.png);
+  }
+  #Train{
+    background-image: url(../asset/images/train.jpg);
+  }
+  #Bus{
+    background-image: url(../asset/images/bus.jpg);
+  }
+  #Bike{
+    background-image: url(../asset/images/bike.jpg);
+  }
+  #Car{
+    background-image: url(../asset/images/car.jpg);
+  }
+  #Cycle{
+    background-image: url(../asset/images/cycle.jpg);
+  }
+  #Flight{
+    background-image: url(../asset/images/flight.jpg);
+  }
+  #Horse{
+    background-image: url(../asset/images/horse.jpg);
+  }
+  .PlaceContainer{
+    width: 300px;
+    height: 300px;
+   /* background-image:url(../../../Desktop/Blog/asset/images/goldentemple.png) ;*/
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px black;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  #places{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .PlaceName{
+    font-size: 30px;
+    letter-spacing: 5px;
+    color: white;
+    position: absolute;
+    z-index: 22;
+  }
+  .brightnessCont{
+    background-size: 100% 300px;
+    filter: brightness(40%);
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0px;
+    border-radius: 10px;
+  }
+  #Amruthsar{
+    background-image: url(../asset/images/goldentemple.jpg);
+  }
+  #Kalkaji{
+    background-image: url(../asset/images/lotustemple.jpg);
+  }
+  #Secunderabad{
+    background-image: url(../asset/images/golkondafort.jpg);
+  }
+  #Hyderabad{
+    background-image: url(../asset/images/charminar.jpg);
+  }
+  #Agra{
+    background-image: url(../asset/images/tajmahal.jpg);
+  }
+  #Mumbai{
+    background-image: url(../asset/images/gateogindia.jpg);
+  }
+  .PlaceContainer:hover{
+    transform: scale(1.2);
+  }
+#info1{
+      width:65vw;
+      height:80vh;
+      background-color:rgb(9, 61, 81);
+      position:relative;
+      left:500px;
+      top:130px;
+      }
+      #head{
+        font-size: 55px;
+        padding-top:85px;
+        font-weight: bold; 
+      }
+      #data{
+        width:80%;
+        height:35px;
+        background-color: #8ecae6;
+        margin-left: 65px;
+        margin-top: 28px;
+      }
+      #data1{
+        width:80%;
+        height:35px;
+        background-color: #8ecae6;
+        margin-left: 65px;
+        margin-top: 20px;
+      }
+      #data2{
+        width:80%;
+        height:90px;
+        background-color: #8ecae6;
+        margin-left: 65px;
+        margin-top: 20px;
+      }
+    #foremail:hover{
+        transform:translate(16px,-16px)
+      }
+      #forphone:hover{
+        transform:translate(16px,-16px)
+      }
+      #forlocation:hover{
+        transform:translate(16px,-16px)
+      }
+      #forfax:hover{
+        transform:translate(16px,-16px)
+      }
+      #forphone{
+         width:15vw;
+         height:28vh;
+         background-color: #bbd3dd;
+         position:relative;
+         bottom:157px;
+         /* transform:sclae(1.2); */
+        }
+#forlocation{
+  width:15vw;
+  height:28vh;
+  background-color: #bbd3dd;
+ position:relative;
+ bottom:580px;
+/* transform:sclae(1.2); */
+ }
+#forfax{
+  width:15vw;
+  height:28vh;
+  background-color: #bbd3dd;
+ position:relative;
+ bottom:785px;
+ left:240px;
+ /* transform:sclae(1.2); */
+ }
+#foremail{
+  width:15vw;
+  height:28vh;
+  background-color: #bbd3dd;
+ position:relative;
+ bottom:780px;
+ left:240px;
+ /* transform:sclae(1.2); */
+ }
+
+.imagee{
+  width:48%;
+  height:80px;
+  margin-left: 45px;
+  margin-top: 20px;
+}
+#select{
+  background: none;
+  /* appearance: none; */
+  outline:none;
+  border:none;
+  color: #023047;
+}
+#select:hover{
+  color: white;
+}
+.opt{
+  color:white;
+  background-color: #fb8500;
+}
+#logout{
+  display:flex;
+  flex-wrap: wrap;
+}
+#food,#best,#quick,#drinks{
+  width:50%;
+  height:100vh;
+  border-radius: 5px 5px 5px 5px white;
+}
+.foodlist,.bestlist,.quicklist,.drinklist{
+  font-style: oblique;
+  font-size:x-large;
+  color:rgb(225, 165, 121); 
+  border:#23aae4;
+  border-width: 1px;
+  margin-left: 10px;
+  list-style: none;
+  display:none;
+}
+.foodlist:hover{
+  color:black;
+  font-size: xx-large;
+}
+#food{
+  background-image: url("../asset/images/foodimage.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px black;
+  transition: all 0.2s;
+}
+#food:hover{
+  transform:scale(1.0);
+}
+#food:hover .foodlist{
+  background-color: azure;
+  display:block;
+}
+#food:hover #food1{
+  background-color: azure;
+}
+#best{
+  background-image: url("../asset/images/Entertain.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 5px 5px black;
+  transition: all 0.2s;
+}
+#best:hover{
+  transform:scale(1.0);
+}
+#best:hover .bestlist{
+  background-color: azure;
+  display:block;
+}
+#best:hover #best1{
+  background-color: azure;
+}
+.bestlist:hover{
+  color:black;
+  font-size: xx-large;
+}
+#quick:hover{
+  transform:scale(1.0);
+}
+#quick:hover .quicklist{
+  background-color: azure;
+  display:block;
+}
+#quick:hover #quick1{
+  background-color: azure;
+}
+#quick{
+  background-image: url("../asset/images/dinnerimage.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: 5px -5px black;
+  transition: all 0.2s;
+}
+.quicklist:hover{
+  color:black;
+  font-size: xx-large;
+}
+#drinks:hover{
+  transform:scale(1.0);
+}
+#drinks:hover .drinklist{
+  background-color: azure;
+  display:block;
+}
+#drinks:hover #drink1{
+  background-color: azure;
+}
+#drinks{
+  background-image: url("../asset/images/drinks.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  box-shadow: -5px 5px black;
+  transition: all 0.2s;
+}
+.drinklist:hover{
+  color:black;
+  font-size: xx-large;
+}

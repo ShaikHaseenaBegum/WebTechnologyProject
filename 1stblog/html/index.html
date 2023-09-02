@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js"></script>
+</head>
+<body>
+    <form>
+        <div id="outerContainer">
+            <div id="innerContainer">
+                <h1>Login</h1>
+                <div id="emailDiv">
+                    <input placeholder="Enter the Email" class="inputTag">
+                </div>
+                <div id="passDiv">
+                    <input placeholder="Enter the Password" class="inputTag" type="password">
+                <img src="../asset/images/closeeyesmonkey.png" alt="" id="visibleLogo" onmousedown="visiblepassword()" onmouseup="invisiblepassword()">
+
+                </div>
+    <h4 id="status"></h4>
+    <input id="loginButton" type="button" value="Login" onclick="loginFun()">
+            </div>
+        </div>
+    </form>
+    <h4 id="account">Don't have an Account?
+        <a href="../html/signup.html">Click here!</a></h4>
+
+</body>
+</html>
